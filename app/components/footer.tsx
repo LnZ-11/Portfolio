@@ -14,7 +14,7 @@ export default function Footer(){
                     <h3 className="text-lg font-bold">Contact</h3>
                     <p>contact@bloom.com</p>
                     <p>+33 1 84 17 18 19</p>
-                    <p>12, rue de l'industrie, 75011 Paris</p>
+                    <p>12, rue de l&apos;industrie, 75011 Paris</p>
                 </div>
             </div>
         </div>

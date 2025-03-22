@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 interface LeafBackgroundProps {
   children?: React.ReactNode;
@@ -10,7 +10,7 @@ const LeafMotifBackground = ({ children }: LeafBackgroundProps) => {
   const [leaves, setLeaves] = useState<React.ReactNode[]>([]);
 
   // Generate different leaf shapes
-  const leafShapes = [
+  const leafShapes = useMemo(() => [
     'polygon(50% 0%, 80% 30%, 60% 100%, 20% 70%)', // Standard leaf
     'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)', // Diamond leaf
     'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)', // Octagon leaf
@@ -21,10 +21,10 @@ const LeafMotifBackground = ({ children }: LeafBackgroundProps) => {
     'polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)', // Octagon leaf
     'polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%)', // Teardrop leaf
     'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)' // Rounded square leaf
-  ];
+  ], []);
 
   // Generate different green shades
-  const greenShades = [
+  const greenShades = useMemo(() => [
     '#03c10c', // Bright green
     '#0a8a43', // Dark green
     '#7cb342', // Light green
@@ -33,7 +33,7 @@ const LeafMotifBackground = ({ children }: LeafBackgroundProps) => {
     '#006400', // Deep green
     '#32cd32', // Lime green
     '#DF950DFF', // Orange
-  ];
+  ], []);
 
   // Generate leaves only on the client side
   useEffect(() => {
@@ -71,7 +71,7 @@ const LeafMotifBackground = ({ children }: LeafBackgroundProps) => {
       );
     }
     setLeaves(generatedLeaves);
-  },[]);
+  }, [greenShades, leafShapes]);
 
   return (
     <div className="relative bg-[#fef9e7] min-h-screen w-full overflow-hidden">
