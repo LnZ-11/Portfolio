@@ -38,7 +38,7 @@ export default function ContactForm() {
   };
   return (
     <form  className="flex justify-center items-center text-black" onSubmit={handleSubmit(onSubmit)}>
-      <div  className="bg-white shadow-lg rounded-2xl p-6 w-full max-w-sm space-y-4" >
+      <div >
         <div className="flex-row text-center">
           <h2 className="text-2xl font-bold text-gray-700 text-center" >Name</h2>
           <input 

@@ -37,10 +37,10 @@ export default function App() {
           <a href="mailto:lyes.lattari@example.com" className="text-blue-500 hover:text-blue-700">
             <FaEnvelope size={24} />
           </a>
-          <a href="https://wa.me/YOUR_PHONE_NUMBER" className="text-green-500 hover:text-green-700">
+          <a href="https://wa.me/213542858609" className="text-green-500 hover:text-green-700">
             <FaWhatsapp size={24} />
           </a>
-          <a href="https://github.com/yourusername" className="text-gray-800 hover:text-gray-600">
+          <a href="https://github.com/LnZ-11" className="text-gray-800 hover:text-gray-600">
             <FaGithub size={24} />
           </a>
           <a href="https://linkedin.com/in/yourusername" className="text-blue-700 hover:text-blue-900">
