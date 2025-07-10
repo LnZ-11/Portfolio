@@ -32,13 +32,12 @@ const LeafMotifBackground = ({ children }: LeafBackgroundProps) => {
     '#8bc34a', // Lime green
     '#006400', // Deep green
     '#32cd32', // Lime green
-    '#DF950DFF', // Orange
   ], []);
 
   // Generate leaves only on the client side
   useEffect(() => {
     const generatedLeaves = [];
-    const leafCount = Math.random() * 30 + 20; // Increased number of leaves
+    const leafCount = Math.random() * 30 + 40; // Increased number of leaves
 
     for (let i = 0; i < leafCount; i++) {
       // Random properties for each leaf
@@ -74,7 +73,7 @@ const LeafMotifBackground = ({ children }: LeafBackgroundProps) => {
   }, [greenShades, leafShapes]);
 
   return (
-    <div className="relative bg-[#fef9e7] min-h-screen w-full overflow-hidden">
+    <div className="relative bg-[#00000000] min-h-screen w-full overflow-hidden">
       {leaves}
       {/* Content container */}
       <div className="relative z-10">

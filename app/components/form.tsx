@@ -5,6 +5,7 @@ import {z} from "zod";
 import { PhoneInput } from "react-international-phone";
 import "react-international-phone/style.css";
 import {zodResolver} from "@hookform/resolvers/zod";
+import { motion } from "motion/react"
 
 
 export default function ContactForm() {
@@ -30,70 +31,86 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Erreur d'envoi");
-      setFeedback("✅ Email envoyé !");
+      setFeedback("Sent");
     } catch (error) {
-      setFeedback("❌ Erreur lors de l'envoi");
+      setFeedback("Error");
       console.log(error);
     }
   };
   return (
-    <form  className="flex justify-center items-center text-black" onSubmit={handleSubmit(onSubmit)}>
-      <div >
-        <div className="flex-row text-center">
-          <h2 className="text-2xl font-bold text-gray-700 text-center" >Name</h2>
-          <input 
-            type="text" 
-            id="name" 
-            {...register("name")}
-            className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            placeholder="Enter your name"
-          />
-          {
-            //error message display
-          }
-          {errors.name && (<p className="text-red-500 text-sm">{errors.name.message}</p>)}
+    <form  className="flex justify-center items-center" onSubmit={handleSubmit(onSubmit)}>
+      <div className="flex flex-col gap-6 p-6 max-w-2xl mx-auto">
+        <div className="flex flex-row gap-6">
+          <div className="flex flex-col w-full">
+            <h2 className="text-2xl font-bold text-gray-700 mb-2">Name</h2>
+            <input 
+              type="text" 
+              id="name" 
+              {...register("name")}
+              className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+              placeholder="Enter your name"
+            />
+            {errors.name && (
+              <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>
+            )}
+          </div>
+          <div className="flex flex-col w-full">
+            <h2 className="text-2xl font-bold text-gray-700 mb-2">Email</h2>
+            <input 
+              type="email" 
+              id="email" 
+              {...register("email",)}
+              className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+              placeholder="Enter your email"
+            />
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>
+            )}
+          </div>
         </div>
-        <div className="flex-row text-center">
-          <h2 className="text-2xl font-bold text-gray-700 text-center">Email</h2>
-          <input 
-            type="email" 
-            id="email" 
-            {...register("email",)}
-            className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            placeholder="Enter your email"
-          />
-          {errors.email && (<p className="text-red-500 text-sm">{errors.email.message}</p>)}
-        </div>
-        <div className="flex flex-col text-center justify-center items-center w-full">
-          <h2 className="text-2xl font-bold text-gray-700 text-center">Phone</h2>
+        <div className="flex flex-col">
+          <h2 className="text-2xl font-bold text-gray-700 mb-2">Phone</h2>
           <Controller
             control={control}
             name="phone"
             render={({ field }) => (
-              <PhoneInput {...field} defaultCountry="ca" className="p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <div className="w-full">
+                <PhoneInput 
+                  {...field} 
+                  defaultCountry="ca" 
+                  className="w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                />
+              </div>
             )}
           />
-          {errors.phone && (<p className="text-red-500 text-sm">{errors.phone.message}</p>)}
+          {errors.phone && (
+            <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>
+          )}
         </div>
-        <div className="flex-row text-center">
-          <h2 className="text-2xl font-bold text-gray-700 text-center">Message</h2>
+        <div className="flex flex-col">
+          <h2 className="text-2xl font-bold text-gray-700 mb-2">Message</h2>
           <textarea 
               id="message" 
               {...register("message")}
-              className="border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
               placeholder="Enter your message"
+              rows={4}
           />
-          {errors.message && (<p className="text-red-500 text-sm">{errors.message.message}</p>)}
+          {errors.message && (
+            <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>
+          )}
         </div>
         {/* Feedback */}
         {feedback && <p className="text-center font-medium">{feedback}</p>}
-        <button
+        <motion.button
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}  
           type="submit"
           disabled={isSubmitting}
-          className={`w-full text-white py-3 rounded-lg font-semibold transition-all ${isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-600"}`}
+          className={`w-1/2  mx-auto text-white py-3 rounded-lg font-semibold transition-all ${isSubmitting ? "bg-gray-400 cursor-not-allowed" : "bg-[#0b8a43] hover:bg-[#14a550]"}`}
         >
-          {isSubmitting ? "Envoi..." : "Envoyer"}
-        </button>
+          {isSubmitting ? "Sending..." : "Send"}
+        </motion.button>
       </div>
     </form>
   )

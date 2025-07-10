@@ -21,7 +21,7 @@ export async function POST(req: Request) {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.EMAIL_USER,
-      subject: "📩 Nouveau message depuis ton Portfolio",
+      subject: "*Portfolio Message*",
       text: `De:\n${name}\n\nEmail:\n${email}\n\nPhone:\n${phone}\n\nMessage:\n${message}`,
     };
     // Envoi de l'email

@@ -1,15 +1,30 @@
 "use client"
 import ContactForm from '../components/form';
 import Contact from '../components/contact'
+import {motion} from "motion/react"
 
 export default function ContactPage() {
   return (
-    <div className=" flex items-center justify-center p-6">
-      <div className="w-full max-w-md flex flex-col gap-4 bg-white shadow-lg rounded-2xl p-6 w-full max-w-sm space-y-4">
-        <Contact/>
-        <h1 className="text-2xl font-bold text-gray-700 text-center">OR</h1>
-        <ContactForm />
+    <motion.div 
+    initial={{ scale: 0 }} 
+    animate={{ scale: 1 }} 
+    className={"w-full"}
+    >
+      <div className="w-full w-5/6 my-4 mx-auto px-4">
+        <div className="backdrop-blur-lg bg-black/40 p-12 rounded-2xl shadow-lg border border-gray-200">
+          <div className="flex flex-row gap-12 items-center">
+            <div className="w-[60%]">
+              <Contact/>
+            </div>
+            <div className="flex-shrink-0 flex flex-col items-center gap-4">
+              <div className="w-1 h-96 bg-gray-700 rounded-full"></div>
+            </div>
+            <div className="w-[40%]">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
