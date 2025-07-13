@@ -42,7 +42,7 @@ return(
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
       </svg>
     </button>
-    <Image src="/Images/profilePic.png" alt="profile-picture" width={32} height={32} className="inline-block object-cover object-center w-8 h-8 rounded outline-none group border border-stone-800 p-0.5 lg:ml-auto" />
+    <Image src="/Images/profilePic.jpg" alt="profile-picture" width={32} height={32} className="inline-block object-cover object-center w-8 h-8 rounded outline-none group border border-stone-800 p-0.5 lg:ml-auto" />
   </div>
   <div className={`overflow-scroll transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96' : 'max-h-0'}`} id="navbar-collapse">
     <div className="min-w-60 mt-4 flex flex-col gap-1">

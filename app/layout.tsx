@@ -4,6 +4,7 @@ import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import "./globals.css";
 import LeafMotifBackground from "./components/leafBackground";
+import WaveBackground from "./components/waveBackground";
 
 export default function RootLayout({
   children,
@@ -14,12 +15,11 @@ export default function RootLayout({
     <html lang="en">
       <body 
       className={"h-auto w-full"}>
+        <main className="flex flex-col w-full max-w-5xl gap-4 justify-center text-center text-black"/>
+        <WaveBackground>
         <Navbar/>
-        <main className="flex flex-col w-full max-w-5xl mx-auto gap-4 h-auto justify-center text-center text-black my-12"></main>
-        <LeafMotifBackground>
         {children}
-        </LeafMotifBackground>
-        <main/>
+        </WaveBackground>
         <Footer/>
       </body>
     </html>
