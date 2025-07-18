@@ -17,8 +17,11 @@ export default function RootLayout({
       className={"h-auto w-full"}>
         <main className="flex flex-col w-full max-w-5xl gap-4 justify-center text-center text-black"/>
         <WaveBackground>
+          <div className="relative min-h-screen z-1">
+
         <Navbar/>
         {children}
+          </div>
         </WaveBackground>
         <Footer/>
       </body>
