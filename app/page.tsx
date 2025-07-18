@@ -84,10 +84,10 @@ export default function App() {
       </div>
     </div>
   </motion.div>
-  <motion.div initial={{scale:0}} whileInView={{scale:1}} className='w-11/12 md:w-4/5 flex flex-col md:flex-row gap-4 mx-auto backdrop-blur-lg bg-black/40 p-12 rounded-2xl'>
+  <motion.div initial={{scale:0}} whileInView={{scale:1}} className='w-11/12 md:w-4/5 flex flex-co  l md:flex-row gap-4 mx-auto backdrop-blur-lg bg-black/40 p-12 rounded-2xl'>
             <div className='flex flex-col gap-4 md:w-3/5 '>
                 <h2 className='text-center text-6xl font-bold bg-gradient-to-bl from-purple-700 from-0% via-rose-500 via-25% to-blue-900 to-100% bg-clip-text text-transparent'>who am I ?</h2>
-                <p>I’m Lyes, a frontend web developer driven by creativity and curiosity. Holding a degree in Automation and Mechanical Engineering, I love bridging the gap between technical precision and aesthetic design. Beyond coding, I’m passionate about science, always eager to learn something new, and I channel that same energy into playing electric guitar — where complex riffs and innovation meet. For me, building on the web is as thrilling as crafting a powerful solo.</p>
+                <p>I&apos;m Lyes, a frontend web developer driven by creativity and curiosity. Holding a degree in Automation and Mechanical Engineering, I love bridging the gap between technical precision and aesthetic design. Beyond coding, I’m passionate about science, always eager to learn something new, and I channel that same energy into playing electric guitar — where complex riffs and innovation meet. For me, building on the web is as thrilling as crafting a powerful solo.</p>
             </div>
             <div className='flex md:w-2/5 justify-center items-center '>
               <motion.a whileHover={{scale:1.1}} whileTap={{scale:0.95}} href="/projects">

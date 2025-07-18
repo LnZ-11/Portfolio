@@ -3,7 +3,6 @@
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import "./globals.css";
-import LeafMotifBackground from "./components/leafBackground";
 import WaveBackground from "./components/waveBackground";
 
 export default function RootLayout({
