@@ -64,7 +64,7 @@ export default function App() {
           <div className="max-w-xl mx-auto mb-6 font-[Sora] text-lg md:text-xl text-gray-200 text-justify">
             <h1 className='text-2xl md:text-6xl font-bold'>Dream it</h1>
             <h1 className='text-2xl md:text-6xl font-bold bg-gradient-to-r from-[#00ff88] to-[#8a2be2] bg-clip-text text-transparent'>I code it </h1>
-            <h1 className='text-2xl md:text-6xl font-bold'>It's that simple !</h1>
+            <h1 className='text-2xl md:text-6xl font-bold'>It&apos;s that simple !</h1>
           </div>
           {/* Tech Stack */}
           <div className="flex flex-wrap justify-center gap-2 md:gap-4">
@@ -84,10 +84,10 @@ export default function App() {
       </div>
     </div>
   </motion.div>
-  <motion.div initial={{scale:0}} whileInView={{scale:1}} className='w-11/12 md:w-4/5 flex flex-co  l md:flex-row gap-4 mx-auto backdrop-blur-lg bg-black/40 p-12 rounded-2xl'>
+  <motion.div initial={{scale:0}} whileInView={{scale:1}} className='w-11/12 md:w-4/5 flex flex-col md:flex-row gap-4 mx-auto backdrop-blur-lg bg-black/40 p-12 rounded-2xl'>
             <div className='flex flex-col gap-4 md:w-3/5 '>
                 <h2 className='text-center text-6xl font-bold bg-gradient-to-bl from-purple-700 from-0% via-rose-500 via-25% to-blue-900 to-100% bg-clip-text text-transparent'>who am I ?</h2>
-                <p>I&apos;m Lyes, a frontend web developer driven by creativity and curiosity. Holding a degree in Automation and Mechanical Engineering, I love bridging the gap between technical precision and aesthetic design. Beyond coding, I’m passionate about science, always eager to learn something new, and I channel that same energy into playing electric guitar — where complex riffs and innovation meet. For me, building on the web is as thrilling as crafting a powerful solo.</p>
+                <p>I&apos;m Lyes, a frontend web developer driven by creativity and curiosity. Holding a degree in Automation and Mechanical Engineering, I love bridging the gap between technical precision and aesthetic design. Beyond coding, I&apos;m  passionate about science, always eager to learn something new, and I channel that same energy into playing electric guitar — where complex riffs and innovation meet. For me, building on the web is as thrilling as crafting a powerful solo.</p>
             </div>
             <div className='flex md:w-2/5 justify-center items-center '>
               <motion.a whileHover={{scale:1.1}} whileTap={{scale:0.95}} href="/projects">
@@ -100,7 +100,7 @@ export default function App() {
   </motion.div>
   <motion.a whileHover={{scale:1.1}} whileTap={{scale:0.95}} href="/contact">
     <div className='flex md:flex-row flex-col items-center gap-2 text-center rounded-2xl p-4 backdrop-blur-lg bg-black/40 p-12 rounded-2xl md:[box-shadow:_0_0_10px_white,_0_0_20px_white,_0_0_30px_white] md:border md:border-gray-200 '>
-      <p className='text-6xl font-bold bg-gradient-to-r from-[#00ff88] to-[#8a2be2] bg-clip-text text-transparent'>Let's work together !</p>
+      <p className='text-6xl font-bold bg-gradient-to-r from-[#00ff88] to-[#8a2be2] bg-clip-text text-transparent'>Let&apos;s work together !</p>
     </div>
   </motion.a>
   <motion.div
