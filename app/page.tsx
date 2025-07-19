@@ -105,6 +105,9 @@ export default function App() {
   </motion.a>
   <motion.div
   className={'w-11/12 md:w-4/5 flex flex-col md:flex-row'}>
+    <div className='w-full md:w-3/5 flex flex-col m-auto content-center text-center'>
+            <motion.img  whileInView={{rotate:180,scale:1}} initial={{scale:0}} whileHover={{scale:1.1,rotate:200}} whileTap={{scale:0.95,rotate:180}} src="/Images/reactLogo.svg" alt="React Logo" width={64} height={64} className="w-1/5 h-1/5 m-auto"/>
+            </div>
             <div className='w-full md:w-2/5 text-lg flex flex-col m-auto content-center text-justify'>
               <h2 className='text-center text-2xl font-bold bg-gradient-to-r from-green-500 to-rose-600 bg-clip-text text-transparent'>Check my projects </h2>
               <p>React is a very popular JavaScript library for front end developpement. It is very powerfull and versatile</p>
@@ -114,9 +117,7 @@ export default function App() {
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate ducimus facilis quam asperiores dolorum eum, voluptas temporibus, ullam eius, repellat commodi. Error velit blanditiis corrupti nemo possimus nostrum totam voluptate?</p>
 
             </div>
-            <div className='w-full md:w-3/5 flex flex-col m-auto content-center text-center'>
-            <motion.img  whileInView={{rotate:180,scale:1}} initial={{scale:0}} whileHover={{scale:1.1,rotate:200}} whileTap={{scale:0.95,rotate:180}} src="/Images/reactLogo.svg" alt="React Logo" width={64} height={64} className="w-1/5 h-1/5 m-auto"/>
-            </div>
+            
   </motion.div>
   
   </div>

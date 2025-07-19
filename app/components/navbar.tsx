@@ -10,7 +10,7 @@ export default function Navbar(){
   const [isOpen, setIsOpen] = useState(false);
 
 return(
-  <nav className="sticky top-0 z-50 rounded-lg border shadow-lg overflow-hidden p-2 bg-white border-stone-200 shadow-stone-950/5 mx-auto w-full max-w-screen-xl">
+  <nav className="sticky top-0 z-50 rounded-lg shadow-lg overflow-hidden p-2 bg-[#C4C4C4FF] shadow-stone-950/5 mx-auto w-full max-w-screen-xl">
   <div className="flex items-center">
     <RiAccountCircleLine className='text-black'/>
   <Link href="/" className="font-sans antialiased text-sm text-black ml-2 mr-2 block py-1 font-semibold">Lyes Lattari</Link>
