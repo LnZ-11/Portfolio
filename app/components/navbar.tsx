@@ -4,7 +4,6 @@ import {FaLaptopCode,FaEnvelope } from 'react-icons/fa';
 import { RiAccountCircleLine } from "react-icons/ri";
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 
 interface NavbarProps {
   isOpen: boolean;
