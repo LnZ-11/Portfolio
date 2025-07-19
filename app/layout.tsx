@@ -21,8 +21,7 @@ export default function RootLayout({
       className={"h-auto w-full"}>
         <WaveBackground >
             <Navbar isOpen={isOpen} setIsOpen={setIsOpen} onClicking={clicked}/>
-          <main 
-        className="flex flex-col w-full max-w-5xl gap-4 justify-center text-center text-black"/>
+          <main className="flex flex-col w-full max-w-5xl gap-4 justify-center text-center text-black"/>
           <div className="relative min-h-screen z-1" onClick={clicked}>
             {children}
           </div>
