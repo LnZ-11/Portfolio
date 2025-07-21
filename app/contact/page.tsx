@@ -18,7 +18,7 @@ export default function ContactPage() {
               <Contact/>
             </div>
             <div className="hidden md:flex flex-shrink-0 flex flex-col items-center gap-4">
-              <div className="hidden md:block w-1 h-96 bg-gray-700 rounded-full"></div>
+              <div className="hidden md:block w-1 h-96 rounded-full"></div>
             </div>
             <div className="w-full md:w-[40%]">
               <ContactForm />

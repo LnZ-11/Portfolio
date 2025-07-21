@@ -2,7 +2,7 @@
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import "./globals.css";
-import WaveBackground from "./components/waveBackground";
+import LeafBackground from "./components/leafBackground";
 import { useState } from 'react';
 
 export default function RootLayout({
@@ -19,14 +19,14 @@ export default function RootLayout({
     <html lang="en">
       <body 
       className={"h-auto w-full"}>
-        <WaveBackground >
+        <LeafBackground >
             <Navbar isOpen={isOpen} setIsOpen={setIsOpen} onClicking={clicked}/>
           <main className="flex flex-col w-full max-w-5xl gap-4 justify-center text-center text-black"/>
           <div className="relative min-h-screen z-1" onClick={clicked}>
             {children}
           </div>
+        </LeafBackground>
         <Footer/>
-        </WaveBackground>
       </body>
     </html>
   );

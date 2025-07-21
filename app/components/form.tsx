@@ -42,12 +42,12 @@ export default function ContactForm() {
       <div className="flex flex-col gap-6 p-6 max-w-2xl mx-auto">
         <div className="flex flex-row gap-6">
           <div className="flex flex-col w-full">
-            <h2 className="text-2xl font-bold text-gray-700 mb-2">Name</h2>
+            <h2 className="text-2xl font-bold text-gray-700 md:text-white mb-2">Name</h2>
             <input 
               type="text" 
               id="name" 
               {...register("name")}
-              className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+              className="w-full border border-gray-300 text-black md:text-white p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
               placeholder="Enter your name"
             />
             {errors.name && (
@@ -55,12 +55,12 @@ export default function ContactForm() {
             )}
           </div>
           <div className="flex flex-col w-full">
-            <h2 className="text-2xl font-bold text-gray-700 mb-2">Email</h2>
+            <h2 className="text-2xl font-bold text-gray-700 md:text-white mb-2">Email</h2>
             <input 
               type="email" 
               id="email" 
               {...register("email",)}
-              className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+              className="w-full border border-gray-300 text-black md:text-white p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
               placeholder="Enter your email"
             />
             {errors.email && (
@@ -78,7 +78,7 @@ export default function ContactForm() {
                 <PhoneInput 
                   {...field} 
                   defaultCountry="ca" 
-                  className="w-full p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                  className="w-full p-4 rounded-lg text-black md:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
                 />
               </div>
             )}
@@ -92,7 +92,7 @@ export default function ContactForm() {
           <textarea 
               id="message" 
               {...register("message")}
-              className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+              className="w-full border border-gray-300 text-black md:text-white p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
               placeholder="Enter your message"
               rows={4}
           />
