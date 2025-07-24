@@ -33,7 +33,7 @@ export default function Navbar({ isOpen, setIsOpen, onClicking }: NavbarProps) {
  },[])
 
 return(
-  <nav className={`sticky top-0 z-5 md:rounded-b-lg shadow-lg overflow-hidden p-2 bg-[#C4C4C4FF] shadow-stone-950/5 mx-auto w-full max-w-screen-xl transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+  <nav className={`sticky top-0 z-5 md:rounded-b-lg shadow-lg overflow-hidden p-2 bg-[#C4C4C4FF] md:h-[5vh] shadow-stone-950/5 mx-auto w-full max-w-screen-xl transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
   <div className="flex items-center">
     <RiAccountCircleLine className='text-black'/>
   <Link href="/" onClick={onClicking} className="font-sans antialiased text-sm text-black ml-2 mr-2 block py-1 font-semibold">Lyes Lattari</Link>

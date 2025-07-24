@@ -59,7 +59,7 @@ const LeafBackground = ({ children }: LeafBackgroundProps) => {
       const rotation = Math.floor(Math.random() * 360) + 90; // Full rotation possibilities
       const scale = (Math.random() * 0.5) + 0.5; // Scale between 0.5 and 1.0
       const rotationAnimation = Math.floor(Math.random() * 2 - 1) * Math.floor(Math.random() * 10) + rotation;
-      const durationAnimation = Math.floor(Math.random() * 3) + 10;
+      const durationAnimation = Math.floor(Math.random() * 7) + 5;
 
       generatedLeaves.push(
         <motion.div

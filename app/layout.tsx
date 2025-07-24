@@ -20,11 +20,12 @@ export default function RootLayout({
       <body 
       className={"h-auto w-full"}>
         <LeafBackground >
-            <Navbar isOpen={isOpen} setIsOpen={setIsOpen} onClicking={clicked}/>
-          <main className="flex flex-col w-full max-w-5xl gap-4 justify-center text-center text-black"/>
-          <div className="relative min-h-screen z-1" onClick={clicked}>
+          <Navbar isOpen={isOpen} setIsOpen={setIsOpen} onClicking={clicked}/>
+          <main className="flex flex-col m-auto relative min-h-screen z-1 justify-center text-center" onClick={clicked}>
+            <div className='w-full flex flex-col gap-24 md:gap-35 items-center content-center pb-12 '>
             {children}
-          </div>
+            </div>
+          </main>  
         </LeafBackground>
         <Footer/>
       </body>
