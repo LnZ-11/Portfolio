@@ -60,7 +60,7 @@ export default function ContactForm() {
               type="email" 
               id="email" 
               {...register("email",)}
-              className="w-full border border-gray-300 text-black md:text-white p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+              className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
               placeholder="Enter your email"
             />
             {errors.email && (
@@ -68,17 +68,16 @@ export default function ContactForm() {
             )}
           </div>
         </div>
-        <div className="flex flex-col">
-          <h2 className="text-2xl font-bold text-gray-700 mb-2">Phone</h2>
+        <div className="flex flex-col w-full justify-center">
+          <h2 className="text-2xl font-bold mb-2">Phone</h2>
           <Controller
             control={control}
             name="phone"
             render={({ field }) => (
-              <div className="w-full">
+              <div className="flex justify-center">
                 <PhoneInput 
                   {...field} 
-                  defaultCountry="ca" 
-                  className="w-full p-4 rounded-lg text-black md:text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                  defaultCountry="fr" 
                 />
               </div>
             )}
@@ -88,11 +87,11 @@ export default function ContactForm() {
           )}
         </div>
         <div className="flex flex-col">
-          <h2 className="text-2xl font-bold text-gray-700 mb-2">Message</h2>
+          <h2 className="text-2xl font-bold mb-2">Message</h2>
           <textarea 
               id="message" 
               {...register("message")}
-              className="w-full border border-gray-300 text-black md:text-white p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+              className="w-full border border-gray-300 p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
               placeholder="Enter your message"
               rows={4}
           />

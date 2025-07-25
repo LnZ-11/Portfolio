@@ -103,12 +103,11 @@ export default function App() {
             </div>
           </motion.a>
           <div
-            className={'w-11/12 md:w-4/5 flex flex-col md:flex-row'}>
+            className={'w-11/12 md:w-4/5 flex flex-col md:flex-row gap-12'}>
             <div className='w-full md:w-3/5 flex flex-col m-auto content-center text-center'>
             <motion.img viewport={{ once: true }} whileInView={{rotate:180,scale:1}} initial={{scale:0}} whileHover={{scale:1.1,rotate:200}} whileTap={{scale:0.95,rotate:180}} src="/Images/reactLogo.svg" alt="React Logo" width={64} height={64} className="w-1/5 h-1/5 m-auto"/>
             </div>
             <div className='w-full md:w-2/5 text-lg flex flex-col m-auto content-center text-justify'>
-              <h2 className='text-center text-2xl font-bold bg-gradient-to-r from-green-500 to-rose-600 bg-clip-text text-transparent'>Check my projects </h2>
               <p className='text-2xl'>
                 React is one of the most popular javascript libraries for building dynamic and modern user interfaces.
                 Its power lies in its flexibility, component-based structure, and ability to create fast, interactive experiences across web applications. whether its a single-page app or a complex ui, react makes development smooth, scalable, and fun to work with.
