@@ -20,19 +20,23 @@ export default function App() {
   ];
 
   return(
-        <>
-         <Image 
-                  src="/Images/profilePic.jpg" 
-                  alt="Profile Photo" 
-                  width={0} 
-                  height={0} 
-                  onLoad={() => setimageLoaded(true)}
-                  className={`${imageLoaded ? 'hidden' : 'absolute'}`}
-                  />
+    <>
+    <Image 
+    src="/Images/profilePic.jpg" 
+    alt="Profile Photo" 
+    width={0} 
+    height={0} 
+    onLoad={() => setimageLoaded(true)}
+    className={`${imageLoaded ? 'hidden' : 'absolute'}`}
+    />
         { imageLoaded && (
+          <>
           <NeonFrame>
               <motion.div 
-              whileHover={{scale:1.13}} whileTap={{scale:0.95}} 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ scale : 1.05 }} 
+              whileTap={{ scale: 1 }} 
               className={"w-102 h-102 rounded-2xl overflow-hidden border-4 border-blue-500 mx-auto"}>
                  {/* Round Profile Photo */}
                 <Image 
@@ -85,8 +89,6 @@ export default function App() {
           </div>
         </div>
         </NeonFrame>
-          )
-        }
           <motion.div
             viewport={{ once: true }}
             initial={{scale:0}} 
@@ -129,5 +131,6 @@ export default function App() {
             </div>  
           </div>
         </>
-
-)}
+        )}
+      </>
+  )}

@@ -11,8 +11,9 @@ export default function NeonFrame({ children }: NeonFrameProps) {
     <div className='w-full flex flex-col gap-24 md:gap-35  items-center content-center pb-12 '>
         <motion.div 
         viewport={{ once: true }}
-        initial={{ scale: 0 }} 
-        animate={{ scale: 1 }} 
+        initial={{ translateY:100, opacity:0 }} 
+        animate={{ translateY:0, opacity:1 }} 
+        transition={{ duration: 1, delay: 0.1 }}
         className={"w-full lg:w-4/5 flex flex-col lg:flex-row items-center justify-center gap-4 lg:h-[90vh] rounded-2xl"}
         >
             <div className="w-full lg:w-5/6 mx-auto px-4 lg:px-8 ">
