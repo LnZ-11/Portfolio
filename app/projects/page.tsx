@@ -12,18 +12,6 @@ const projects = [
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     githubLink: 'https://github.com/LnZ-11/Portfolio'
   },
-  {
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce application with user authentication and payment integration',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    githubLink: 'https://github.com/yourusername/ecommerce-project'
-  },
-  {
-    title: 'Machine Learning Classifier',
-    description: 'AI-powered image classification tool using deep learning',
-    technologies: ['Python', 'TensorFlow', 'OpenCV'],
-    githubLink: 'https://github.com/yourusername/ml-classifier'
-  }
 ];
 
 export default function ProjectsPage() {
@@ -81,20 +69,20 @@ export default function ProjectsPage() {
         </div>
         
         <div className="text-center mt-12">
+          <Link 
+            href="https://github.com/LnZ-11" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-gray-800 hover:text-blue-600 transition-colors"
+          >
           <motion.div
             viewport={{ once: true }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-blue-600 transition-colors inline-flex items-center"
             >
-            <FaGithub className="mr-2" /> View Full GitHub Profile
+              <FaGithub className="mr-2" /> View Full GitHub Profile
           </motion.div>
-          <Link 
-            href="https://github.com/yourusername" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-gray-800 hover:text-blue-600 transition-colors"
-          >
           </Link>
         </div>
       </div> 

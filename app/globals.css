@@ -8,6 +8,12 @@
   --foreground: #ffffff;
 }
 
+/* styles.css ou globals.css */
+.btn-primary {
+  @apply bg-primary text-white py-2 px-4 rounded hover:bg-blue-700;
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     --background: #0a0a0a;

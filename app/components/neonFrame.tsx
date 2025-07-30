@@ -12,12 +12,12 @@ export default function NeonFrame({ children }: NeonFrameProps) {
         <motion.div 
         viewport={{ once: true }}
         initial={{ scale: 0 }} 
-        whileInView={{ scale: 1 }} 
-        className={"w-full md:w-4/5 flex flex-col md:flex-row items-center justify-center gap-4 md:h-[90vh] rounded-2xl"}
+        animate={{ scale: 1 }} 
+        className={"w-full lg:w-4/5 flex flex-col lg:flex-row items-center justify-center gap-4 lg:h-[90vh] rounded-2xl"}
         >
-            <div className="w-full md:w-5/6 mx-auto px-4 md:px-8 ">
-                <div className="backdrop-blur-lg bg-black/40 p-12 rounded-2xl md:[box-shadow:_0_0_10px_white,_0_0_20px_white,_0_0_30px_white] md:border md:border-gray-200 md:h-[65vh]">
-                    <div className="flex flex-col md:flex-row gap-4 md:gap-8 justify-around text-center items-center">
+            <div className="w-full lg:w-5/6 mx-auto px-4 lg:px-8 ">
+                <div className="backdrop-blur-lg bg-black/40 p-12 rounded-2xl lg:[box-shadow:_0_0_10px_white,_0_0_20px_white,_0_0_30px_white] lg:border lg:border-gray-200 lg:h-[65vh]">
+                    <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 justify-around text-center items-center">
                         {children}
                     </div>
                 </div>

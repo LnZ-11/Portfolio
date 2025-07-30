@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image';
+import { useState } from 'react';
 import NeonFrame from './components/neonFrame';
 import {motion} from 'motion/react';
 import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope, FaReact,FaLongArrowAltRight } from 'react-icons/fa';
@@ -11,6 +12,7 @@ export default function App() {
     name: string;
     icon: React.ReactNode;
   }
+  const [imageLoaded,setimageLoaded]=useState(false)
   
   const techStack: techStack[] = [
     {icon:<SiTypescript className='size-6 mt-0.5 bold'/>, name:"TypeScript"}, {icon:<FaReact className='size-6 mt-0.5 bold'/>, name:"React"}, {icon:<SiNextdotjs className='size-6 mt-0.5 bold'/>, name:'Next.js'}, {icon:<SiTailwindcss className='size-6 mt-0.5 bold'/>, name:'Tailwind CSS'}, 
@@ -19,7 +21,16 @@ export default function App() {
 
   return(
         <>
-        <NeonFrame>
+         <Image 
+                  src="/Images/profilePic.jpg" 
+                  alt="Profile Photo" 
+                  width={0} 
+                  height={0} 
+                  onLoad={() => setimageLoaded(true)}
+                  className={`${imageLoaded ? 'hidden' : 'absolute'}`}
+                  />
+        { imageLoaded && (
+          <NeonFrame>
               <motion.div 
               whileHover={{scale:1.13}} whileTap={{scale:0.95}} 
               className={"w-102 h-102 rounded-2xl overflow-hidden border-4 border-blue-500 mx-auto"}>
@@ -29,6 +40,7 @@ export default function App() {
                   alt="Profile Photo" 
                   width={256} 
                   height={512} 
+                  onLoad={() => setimageLoaded(true)}
                   className="object-cover w-full h-full"
                   />
               </motion.div>
@@ -73,6 +85,8 @@ export default function App() {
           </div>
         </div>
         </NeonFrame>
+          )
+        }
           <motion.div
             viewport={{ once: true }}
             initial={{scale:0}} 
