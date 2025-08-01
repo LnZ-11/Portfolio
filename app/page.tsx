@@ -93,16 +93,17 @@ export default function App() {
             viewport={{ once: true }}
             initial={{scale:0}} 
             whileInView={{scale:1}} 
-            className='w-11/12 md:w-4/5 flex flex-col md:flex-row gap-4   backdrop-blur-lg bg-black/40 p-12 rounded-2xl'
+            className='w-11/12 md:w-4/5 flex flex-col md:flex-row gap-4 backdrop-blur-lg bg-black/40 p-12 rounded-2xl'
           >
             <div className='flex flex-col gap-4 md:w-3/5 '>
             <h2 className='text-center text-6xl font-bold bg-gradient-to-bl from-purple-700 from-0% via-rose-500 via-25% to-blue-900 to-100% bg-clip-text text-transparent'>who am I ?</h2>
-            <p className='text-2xl'>hi, im lyes  a frontend developer who brings engineering precision to creative web experiences.
+            <p className='text-3xl text-justify'>hi, im lyes  a frontend developer who brings engineering precision to creative web experiences.
                   with a background in automation and mechanical engineering, i approach development with a problem-solver mindset and a sharp eye for detail. my goal? building clean, responsive interfaces that are as intuitive as they are engaging.
                   im always exploring fresh technologies, bold ideas, and smarter ways to connect design with functionality. outside the dev world, i recharge through music  especially the electric guitar, where complexity becomes rhythm and flow becomes expression. for me, its another way to stay creative, curious, and in sync with the world.
             </p>
             </div>
             <div className='flex md:w-2/5 justify-center items-center '>
+            <div className="hidden md:block w-1 h-96 bg-gray-700 rounded-full mr-24"></div>
               <motion.a whileHover={{scale:1.1}} whileTap={{scale:0.95}} href="/projects">
                 <div className='flex md:flex-row flex-col items-center gap-2 text-center border border-white rounded-2xl p-4 '>
                   <FaLongArrowAltRight/>

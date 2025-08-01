@@ -14,10 +14,10 @@ export default function NeonFrame({ children }: NeonFrameProps) {
         initial={{ translateY:100, opacity:0 }} 
         animate={{ translateY:0, opacity:1 }} 
         transition={{ duration: 1, delay: 0.1 }}
-        className={"w-full lg:w-4/5 flex flex-col lg:flex-row items-center justify-center gap-4 lg:h-[90vh] rounded-2xl"}
+        className={"w-full lg:w-4/5 flex flex-col lg:flex-row items-center justify-center gap-4 lg:h-[90vh] lg:min-h-[600px] rounded-2xl"}
         >
             <div className="w-full lg:w-5/6 mx-auto px-4 lg:px-8 ">
-                <div className="backdrop-blur-lg bg-black/40 p-12 rounded-2xl lg:[box-shadow:_0_0_10px_white,_0_0_20px_white,_0_0_30px_white] lg:border lg:border-gray-200 lg:h-[65vh]">
+                <div className="backdrop-blur-lg bg-black/40 p-12 rounded-2xl lg:border lg:min-h-[600px] lg:h-[65vh]">
                     <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 justify-around text-center items-center">
                         {children}
                     </div>
