@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import NeonFrame from './components/neonFrame';
 import {motion} from 'motion/react';
-import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope, FaReact,FaLongArrowAltRight } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope, FaReact } from 'react-icons/fa';
 import { SiNextdotjs, SiTypescript, SiNodedotjs, SiTailwindcss, SiGit } from "react-icons/si";
 
 export default function App() {
