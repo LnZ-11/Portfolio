@@ -12,6 +12,12 @@ const projects = [
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     githubLink: 'https://github.com/LnZ-11/Portfolio'
   },
+    {
+    title: 'Movie Finder',
+    description: 'A small app movie finder linked to IMdb API website built with React and Next.js. focused more on logic and functionality rather than design.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    githubLink: 'https://github.com/LnZ-11/projetuseeffect'
+  },
 ];
 
 export default function ProjectsPage() {
