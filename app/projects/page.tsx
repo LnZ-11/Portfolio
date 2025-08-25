@@ -18,6 +18,12 @@ const projects = [
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     githubLink: 'https://github.com/LnZ-11/projetuseeffect'
   },
+      {
+    title: 'MailJet Automation Script',
+    description: 'A node.js script that automatically send customer\'s emails of a restaurant to mailJet. It executes every night at 2:00 AM via Cron Job, by taking the emails saved in the restaurants Software. The software part is deliberately left blank to adapt it to the restaurant\'s own software',
+    technologies: ['Node.js', 'Express', 'MailJet API'],
+    githubLink: 'https://github.com/LnZ-11/automatisation-email-l-addition'
+  },
 ];
 
 export default function ProjectsPage() {
