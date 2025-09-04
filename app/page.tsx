@@ -11,6 +11,20 @@ import Languages from './components/laguages';
 
 export default function App() {
 
+  function scrollTo(smallScreen:number,largeScreen:number){
+    if(window.innerWidth < 768
+    ){
+      window.scrollTo({
+        top: smallScreen,
+        behavior: 'smooth',
+      });
+    }else{
+      window.scrollTo({
+        top: largeScreen,
+        behavior: 'smooth',
+      });
+    }
+  }
   interface techStack {
     name: string;
     icon: React.ReactNode;
@@ -88,10 +102,10 @@ export default function App() {
               </motion.div>
             ))}
           </div>
-          <div className='flex flex-row gap-4 md:gap-8 justify-around text-center items-center'>
+          <div className='flex md:flex-row flex-col gap-4 md:gap-8 justify-around text-center items-center'>
             <a href="/contact"><button className='btn btn-success btn-lg btn-outline rounded-2xl p-2'>Lets Work Tohether !</button></a>
             <a href="/projects"><button className='btn btn-success btn-lg btn-outline rounded-2xl p-2'>Check my Projects</button></a>
-            <button className='btn btn-success btn-lg btn-outline rounded-2xl p-2' onClick={()=>{scrollTo(0,1000)}}>My Bio</button>
+            <button className='btn btn-success btn-lg rounded-2xl p-2' onClick={()=>{scrollTo(1300,1000)}}>My Bio</button>
           </div>
         </div>
         </NeonFrame>

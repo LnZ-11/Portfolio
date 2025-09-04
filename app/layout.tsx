@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body 
-      className={"h-auto w-full text-base-content"}>
+      className={"h-auto w-full text-primary-content"}>
         <LeafBackground >
           <Navbar isOpen={isOpen} setIsOpen={setIsOpen} onClicking={clicked}/>
           <main className="flex flex-col m-auto relative min-h-screen z-1 justify-center text-center" onClick={clicked}>

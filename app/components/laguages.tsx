@@ -1,6 +1,6 @@
 export default function Languages(){
     return(
-        <div className="flex flex-col gap-12 blur-overlay rounded-2xl py-4 px-12">
+        <div className="flex flex-col gap-12 blur-overlay rounded-2xl py-4 px-12 text-primary-content">
             <h1 className="text-2xl md:text-4xl font-bold title-gradient">My Language Abilities</h1>
             <ul>
                 <li>

@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Hero(){
     return(
-        <div className="hero bg-base-200 blur-overlay">
+        <div className="hero bg-base-200 blur-overlay text-primary-content">
   <div className="hero-content flex-col lg:flex-row">
     <Image
       src="/Images/onStage.png"
