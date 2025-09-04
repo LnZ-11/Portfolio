@@ -1,28 +1,53 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #ffffff;
-}
-
-/* styles.css ou globals.css */
-.btn-primary {
-  @apply bg-primary text-white py-2 px-4 rounded hover:bg-blue-700;
-}
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  @plugin "daisyui/theme" {
+    name: "dark";
+    default: false;
+    prefersdark: false;
+    color-scheme: "dark";
+    --color-base-100: oklch(12% 0.042 264.695);
+    --color-base-200: oklch(20% 0.042 265.755);
+    --color-base-300: oklch(27% 0.041 260.031);
+    --color-blur: oklch(0% 0 0 / 0.4);
+    --color-base-content: oklch(96% 0.007 247.896);
+    --color-primary: oklch(87% 0.233 145);
+    --color-primary-content: oklch(96% 0.015 12.422);
+    --color-secondary: oklch(46% 0.266 296.7);
+    --color-secondary-content: oklch(98% 0.016 73.684);
+    --color-accent: oklch(76% 0.233 130.85);
+    --color-accent-content: oklch(98% 0.031 120.757);
+    --color-neutral: oklch(37% 0.044 257.287);
+    --color-neutral-content: oklch(98% 0.003 247.858);
+    --color-info: oklch(58% 0.158 241.966);
+    --color-info-content: oklch(97% 0.013 236.62);
+    --color-success: oklch(79% 0.209 151.711);
+    --color-success-content: oklch(98% 0.018 155.826);
+    --color-warning: oklch(68% 0.162 75.834);
+    --color-warning-content: oklch(98% 0.026 102.212);
+    --color-error: oklch(57% 0.245 27.325);
+    --color-error-content: oklch(97% 0.013 17.38);
+    --radius-selector: 2rem;
+    --radius-field: 1rem;
+    --radius-box: 0.5rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 0;
+    --noise: 1;
   }
 }
-
-body {
-  background:#00000000;
-  color: var(--foreground);
-  font-family: 'inter', Arial, Helvetica, sans-serif;
+.blur-overlay {
+  backdrop-filter: blur(16px); /* équivalent de backdrop-blur-lg */
+  background-color: var(--color-blur); /* ta var DaisyUI */
 }
+.title-gradient {
+  background-image: linear-gradient(to right, var(--color-success), var(--color-primary));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+

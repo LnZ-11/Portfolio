@@ -17,7 +17,7 @@ export default function NeonFrame({ children }: NeonFrameProps) {
         className={"w-full lg:w-4/5 flex flex-col lg:flex-row items-center justify-center gap-4 lg:h-[90vh] lg:min-h-[600px] rounded-2xl"}
         >
             <div className="w-full lg:w-5/6 mx-auto px-4 lg:px-8 ">
-                <div className="backdrop-blur-lg bg-black/40 p-12 rounded-2xl lg:border lg:min-h-[600px] lg:h-[65vh]">
+                <div className="blur-overlay p-12 rounded-2xl lg:border lg:min-h-[600px] lg:h-[65vh]">
                     <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 justify-around text-center items-center">
                         {children}
                     </div>
